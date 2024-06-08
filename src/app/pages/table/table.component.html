@@ -1,0 +1,22 @@
+<div class="container mt-3">
+  <app-search-bar (searchEvent)="search($event)"></app-search-bar>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Avatar</th>
+        <th>Login</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      @if (users.length) { @for (user of users ; track user.id ) {
+      <tr>
+        <td><img [src]="user.avatar_url" width="50" alt="..." /></td>
+        <td>{{ user.login }}</td>
+        <td><a [routerLink]="['/detail', user.login]">View Details</a></td>
+      </tr>
+
+      } @empty {No Users } }
+    </tbody>
+  </table>
+</div>

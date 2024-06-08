@@ -1,0 +1,19 @@
+<div class="container mt-3">
+  <app-search-bar (searchEvent)="search($event)"></app-search-bar>
+  <div class="row">
+    @if (users.length) { @for (user of users ; track user.id ) {
+    <div class="col-md-4">
+      <div class="card mb-3">
+        <img [src]="user.avatar_url" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ user.login }}</h5>
+          <p class="card-text">
+            <a [routerLink]="['/detail', user.login]">View Details</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    } @empty {No Users } }
+  </div>
+</div>

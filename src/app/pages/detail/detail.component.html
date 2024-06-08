@@ -1,0 +1,15 @@
+@if (user) {
+<div class="container mt-3">
+  <div class="card">
+    <img [src]="user.avatar_url" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ user.login }}</h5>
+      <p class="card-text">{{ user.name }}</p>
+      <p class="card-text">Type: {{ user.type }}</p>
+      <p class="card-text">
+        <a [href]="user.html_url" target="_blank">View Profile</a>
+      </p>
+    </div>
+  </div>
+</div>
+}

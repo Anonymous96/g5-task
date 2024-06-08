@@ -1,0 +1,29 @@
+<div class="container mt-3">
+  <h2>Login</h2>
+  <form (submit)="loginWithEmail()">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        [(ngModel)]="email"
+        name="email"
+      />
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input
+        type="password"
+        class="form-control"
+        id="pwd"
+        [(ngModel)]="password"
+        name="password"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+  <button class="btn btn-dark mt-3" (click)="loginWithGitHub()">
+    Login with GitHub
+  </button>
+</div>

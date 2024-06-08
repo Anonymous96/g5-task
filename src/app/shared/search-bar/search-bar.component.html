@@ -1,0 +1,13 @@
+<div class="input-group mb-3">
+  <input
+    [(ngModel)]="searchQuery"
+    type="text"
+    class="form-control"
+    placeholder="Search GitHub Users"
+  />
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" (click)="search()">
+      Search
+    </button>
+  </div>
+</div>
