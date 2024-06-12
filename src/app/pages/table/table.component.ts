@@ -3,6 +3,7 @@ import { Subject, takeUntil } from 'rxjs';
 import { GithubService } from '../../core/services/github.service';
 import { SearchBarComponent } from '../../shared/search-bar/search-bar.component';
 import { RouterModule } from '@angular/router';
+import { GitHubUser } from '../../core/models/user.model';
 
 @Component({
   selector: 'app-table',
@@ -12,7 +13,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './table.component.css',
 })
 export class TableComponent {
-  users: any[] = [];
+  users: GitHubUser[] = [];
   private destroy$ = new Subject<void>();
 
   constructor(private githubService: GithubService) {}

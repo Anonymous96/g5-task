@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { GithubService } from '../../core/services/github.service';
+import { GitHubUser } from '../../core/models/user.model';
 
 @Component({
   selector: 'app-detail',
@@ -11,7 +12,7 @@ import { GithubService } from '../../core/services/github.service';
   styleUrl: './detail.component.css',
 })
 export class DetailComponent {
-  user: any;
+  user?: GitHubUser;
   private destroy$ = new Subject<void>();
 
   constructor(

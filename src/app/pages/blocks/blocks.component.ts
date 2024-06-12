@@ -4,6 +4,7 @@ import { GithubService } from '../../core/services/github.service';
 import { CommonModule } from '@angular/common';
 import { SearchBarComponent } from '../../shared/search-bar/search-bar.component';
 import { RouterModule } from '@angular/router';
+import { GitHubUser } from '../../core/models/user.model';
 
 @Component({
   selector: 'app-blocks',
@@ -13,7 +14,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './blocks.component.css',
 })
 export class BlocksComponent {
-  users: any[] = [];
+  users: GitHubUser[] = [];
   private destroy$ = new Subject<void>();
 
   constructor(private githubService: GithubService) {}
